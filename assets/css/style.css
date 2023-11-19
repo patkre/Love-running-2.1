@@ -12,15 +12,14 @@ body {
     color: #3a3a3a;
 }
 
-/* heading and logo */
+/* headings and logo */
 
 h1,
 h2 {
-    font-family: oswald, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #252525;
-
 }
 
 #logo {
@@ -29,10 +28,10 @@ h2 {
     margin-left: 30px;
 }
 
-/* navigation link */
+/* navigation links */
 
 #menu {
-    font-size: 100%;
+    font-size: 110%;
     letter-spacing: 4px;
 }
 
@@ -60,7 +59,7 @@ h2 {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* hero image */
+/* hero image and cover text */
 
 #hero-outer {
     height: 600px;
@@ -81,13 +80,12 @@ h2 {
     background: url('../images/hero-image.webp') no-repeat center center;
 
     /* animates zoom effect on loading page */
-
     animation-name: hero-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
 }
 
-
+/* creates the level of zoom for hero image */
 @keyframes hero-zoom {
     from {
         transform: scale(1);
@@ -100,7 +98,7 @@ h2 {
 
 #cover-text {
     font-size: 130%;
-    font-family: oswald, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
 
@@ -118,7 +116,7 @@ h2 {
     position: absolute;
 }
 
-/* club-ethos */
+/* club ethos */
 
 #club-ethos {
     height: 600px;
@@ -174,7 +172,7 @@ hr {
 #welcome {
     text-align: center;
     margin: 20px 0;
-    font-size: 200%;
+    font-size: 280%;
 }
 
 #circle-container {
@@ -197,7 +195,7 @@ hr {
 /* event times */
 
 #times {
-    background: url('../images/dublin-city.webp');
+    background-image: url('../images/times-background.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -221,6 +219,8 @@ hr {
     color: #fafafa;
 }
 
+/* footer */
+
 footer {
     height: 150px;
 }
@@ -240,6 +240,8 @@ footer {
     color: #3a3a3a;
 }
 
+/* gallery */
+
 #photos {
     clear: both;
     line-height: 0;
@@ -249,4 +251,91 @@ footer {
 
 #photos>img {
     width: 100%;
+}
+
+/* Media queries */
+
+/* For larger to medium screens size from 1200px wide and down */
+@media screen and (max-width: 1200px) {
+    #club-ethos {
+        width: 65%;
+        height: 1200px;
+        margin: 0 auto;
+    }
+
+    #welcome {
+        padding: 30px 0;
+        margin: 0;
+    }
+
+    #left-about,
+    #right-about {
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    #center-about {
+        clear: both;
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    #times>div {
+        width: 100%;
+        clear: both;
+        height: 150px;
+        padding: 0;
+    }
+
+    hr {
+        display: none;
+    }
+}
+
+/* For medium screen sizes from 950px wide and down */
+@media screen and (max-width: 950px) {
+
+    #menu {
+        clear: left;
+        float: left;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        line-height: 25px;
+    }
+
+    #cover-text {
+        left: 0;
+    }
+
+    #club-ethos {
+        width: 90%;
+        height: 1200px;
+        margin: 0 auto;
+    }
+
+    .left-about-heading,
+    .right-about-heading {
+        width: inherit;
+    }
+
+    .left-about-heading h2,
+    .right-about-heading h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left-about-heading p,
+    .right-about-heading p {
+        text-align: center;
+        padding: 0 20px;
+    }
+}
+
+/* For small screen sizes below 800px width */
+@media screen and (max-width: 800px) {
+    #photos {
+        column-count: 2;
+    }
 }
